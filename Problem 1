@@ -1,0 +1,12 @@
+let data = "Amolya Sharma"
+function getNumberOfString (string){
+    let Name = data;
+    let counts = {};
+    for(const char of string.toLowerCase()){
+        if(/[a-z]/.test(char)){
+            counts[char] = (counts[char] || 0) + 1;
+        }
+    }
+    return counts;
+}
+console.log("Final result", getNumberOfString(data));
